@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="assets/images/list-ul-solid.svg" type="image/x-icon">
+    <title>Lista Cadastro</title>
+</head>
+<body>
+    <header>
+        <button class="hamburguer">
+            <span class="bar"></span>
+        </button>
+        <ul class="menu">
+            <li class="item"><a href="https://www.instagram.com/daniel_ribeiro_da_silva/" class="link" target="_blank">instagram</a></li>
+            <li class="item"><a href="https://github.com/danRdS" class="link" target="_blank">github</a></li>
+            <li class="item"><a href="https://www.youtube.com/@danielribeirodasilva9443/featured" class="link" target="_blank">youtube</a></li>
+            <li class="item"><a href="https://twitter.com/Daniel79023629" class="link" target="_blank">twitter</a></li>
+        </ul>
+        <div class="searchContainer">
+            <form action="" class="formSearch">
+                <input type="text" placeholder="Pesquisar" class="nomePesquisado" id="nomePesquisado" autocomplete="none" required>
+                <button type="button" class="btnSearch btnLupa" title="Pesquisar" id="btnLupa">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <button type="reset" class="btnSearch btnResetSearch" id="btnResetSearch" title="Apagar">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>                    
+            </form>
+        </div>
+        <h1 class="logo">DRS</h1>
+    </header>
+    <div class="container">
+        <section class="firstScreen">
+            <div class="table"></div>
+            <p id="notResultAlert"></p>
+            
+            <section class="fieldBtn btnsAddRemove">
+                <div class="btnExpansive" id="btnExpansiveDelete">
+                    <button class="btn" id="btnExcluir" title="Excluir">
+                        <i class="fa-regular fa-trash-can"></i>
+                        <p>Excluir</p>
+                    </button>
+                </div>
+
+                <button class="btn" id="btnAlterar" title="Alterar">Alterar</button>
+
+                <div class="btnExpansive" id="btnExpansiveAdd">
+                    <button class="btn" id="btnAdd" title="Adicionar">
+                        <i class="fa-solid fa-user-plus"></i>
+                        <p>Add User</p>
+                    </button>
+                </div>
+            </section>
+            <section class="fieldBtn fieldBtnDelete btnsArea">
+                <button type="button" classs="btn" id="btnCancelar">Cancelar</button>
+                <button type="button" class="btn" id="btnConfirmar">Confirmar</button>
+            </section>
+            <section class="fieldBtn fieldBtnChanging btnsArea">
+                <button type="button" class="btn" id="btnCancelarAlteracao">Cancelar</button>
+                <button type="button" class="btn"  id="btnIniciarAlteracao">Alterar</button>
+            </section>
+
+        </section>
+        
+        <section class="addUserScreen">
+            <form action="" class="formUser">
+                <fieldset>
+                   <legend>Dados</legend>
+                   <section class="dataArea">
+                       <input class="inputData" type="text" name="nome" id="nome" placeholder=" " required autocomplete="none">
+                       <label for="nome">Nome</label>
+                    </section>
+                   <section class="dataArea">
+                       <input class="inputData" type="number" name="idade" id="idade" min="1" placeholder=" " step="1.0" required autocomplete="none">
+                       <label for="idade">Idade</label>
+                    </section>
+                </fieldset>
+                <div class="fieldBtn fieldBtnNewUser">
+                    <button type="button" class="btn" id="btnHome">Voltar</button>         
+                    <button type="submit" class="btn" id="btnSalvar">Salvar</button>         
+                    <button type="submit" class="btn" id="btnSalvarAlteracao">Salvar Alteração</button>         
+                </div>
+            </form>
+            <div class="modal">
+                <section class="popup">
+                    <p id="infoConfirmed">Confirmado</p>
+                    <button class="btn" id="btnOkConfirmado">Ok</button>
+                </section>
+            </div>
+        </section>
+        <div class="modal modalForDelete">
+            <section class="popup">
+                <p id="infoPopup"></p>
+                <button class="btn" id="btnOkNotDeleted">Ok</button>
+            </section>
+        </div>
+    </div>
+    <script src="assets/js/script.js" type="module"></script>
+</body>
+</html>
